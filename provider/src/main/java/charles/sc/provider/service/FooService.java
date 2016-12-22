@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class FooService {
     private Log log = LogFactory.getLog(FooService.class);
 
+    //可以进行配置，在consul中动态的配置文件，不用重启，并且设置默认值为foo
     @Value("${foo:foo}")
     private String foo;
 
