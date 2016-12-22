@@ -22,6 +22,6 @@ public class BarService {
     @RequestMapping(method = RequestMethod.GET)
     public String foo() {
         log.info("BarService.foo");
-        return fooService.bar();
+        return fooService.bar();//访问接口的方法
     }
 }

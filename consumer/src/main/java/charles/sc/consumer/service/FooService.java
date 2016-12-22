@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Created by Charles on 2016/12/7.
  */
-@FeignClient(value = "provider")
-@RequestMapping("/foo")
+@FeignClient(value = "provider")//微服务的名称
+@RequestMapping("/foo")//微服务的路径
 public interface FooService {
     @RequestMapping(method = RequestMethod.GET)
-    public String bar();
+    public String bar();//微服务的方法
 }
