@@ -30,6 +30,8 @@ import java.sql.SQLException;
 
 /**
  * Created by Charles on 2016/12/6.
+ * 从数据库里面进行读取验证
+ * 不需要建数据库，data.sql和schema.sql就是建库建表
  */
 @SpringBootApplication
 @EnableAuthorizationServer
