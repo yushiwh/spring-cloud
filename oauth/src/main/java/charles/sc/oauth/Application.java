@@ -4,44 +4,54 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
-import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.ClientDetails;
-import org.springframework.security.oauth2.provider.ClientDetailsService;
-import org.springframework.security.oauth2.provider.ClientRegistrationException;
-import org.springframework.security.oauth2.provider.client.BaseClientDetails;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurer;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.security.KeyPair;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
  * Created by Charles on 2016/12/6.
- * 从数据库里面进行读取验证
- * 不需要建数据库，data.sql和schema.sql就是建库建表
  */
 @SpringBootApplication
 @EnableAuthorizationServer
-public class Application implements AuthorizationServerConfigurer {
+@EnableResourceServer
+@RestController
+public class Application {
+	
+	
+	//pb的方法进行处理
+    @RequestMapping("/pb/resource")
+    public String pbresource() {
+        return "Hello World pbresource! " + System.currentTimeMillis();
+    }
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+  //pt的方法进行处理
+    @RequestMapping("/pt/resource")
+    public String ptresource() {
+        return "Hello World ptresource! " + System.currentTimeMillis();
+    }
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    public UserDetailsService userDetailsService(@Autowired final JdbcTemplate jdbcTemplate) {
         return new UserDetailsService() {
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -57,40 +67,24 @@ public class Application implements AuthorizationServerConfigurer {
         };
     }
 
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.checkTokenAccess("permitAll()");
+    @Bean
+    public JwtAccessTokenConverter jwtAccessTokenConverter() {
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        KeyPair keyPair = new KeyStoreKeyFactory(
+                new ClassPathResource("jwt_123456.jks"), "123456".toCharArray())
+                .getKeyPair("jwt");
+        converter.setKeyPair(keyPair);
+        return converter;
     }
 
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.withClientDetails(new ClientDetailsService() {
-            @Override
-            public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
-                return jdbcTemplate.queryForObject("SELECT * FROM client_details WHERE client_id=?", new RowMapper<BaseClientDetails>() {
-                    @Override
-                    public BaseClientDetails mapRow(ResultSet resultSet, int i) throws SQLException {
-                        BaseClientDetails clientDetails = new BaseClientDetails(resultSet.getString("client_id"),
-                                null,
-                                resultSet.getString("scope"),
-                                resultSet.getString("grant_types"),
-                                null,
-                                resultSet.getString("redirect_uri"));
-                        clientDetails.setClientSecret(resultSet.getString("client_secret"));
-                        return clientDetails;
-                    }
-                }, clientId);
-            }
-        });
+    @Bean
+    public AuthorizationServerConfigurer authorizationServerConfigurer() {
+        return new AuthorizationServerConfigurerBean();
     }
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints)
-            throws Exception {
-        endpoints.authenticationManager(this.authenticationManager);
+    @Bean
+    public ResourceServerConfigurer resourceServerConfigurer() {
+        return new ResourceServerConfigurerBean();
     }
 
     @Bean
