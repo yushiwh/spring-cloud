@@ -54,7 +54,7 @@ scope all
 
 
 ----
-###生成JWT所需密钥
+###生成JWT所需密钥，需要在cmd中输入即可
 keytool -genkeypair -alias jwt -keyalg RSA  -keysize 1024 -validity 3650 -keystore jwt_123456.jks
 输入密钥库口令: 123456
 再次输入新口令: 123456
