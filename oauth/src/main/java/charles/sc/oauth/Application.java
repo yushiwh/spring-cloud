@@ -1,8 +1,13 @@
 package charles.sc.oauth;
 
+import java.security.KeyPair;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -24,16 +29,13 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import java.security.KeyPair;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 /**
  * Created by Charles on 2016/12/6.
  */
 @SpringBootApplication
 @EnableAuthorizationServer
 @EnableResourceServer
+@EnableDiscoveryClient
 @RestController
 public class Application {
 	
