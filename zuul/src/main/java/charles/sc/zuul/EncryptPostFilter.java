@@ -42,6 +42,10 @@ public class EncryptPostFilter extends ZuulFilter {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+        
+        
+        
     }
 
     @Override
