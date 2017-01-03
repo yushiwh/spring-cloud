@@ -16,8 +16,8 @@ public class ResourceServerConfigurerBean implements ResourceServerConfigurer {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/pb/**").permitAll()  // pb 允许
-                .antMatchers("/pt/**").access("#oauth2.hasScope('all')")    // pt oauth2验证，scope=all
-                .anyRequest().permitAll();    // 其他请求允许
+            .antMatchers("/pb/**").permitAll()  // pb 允许
+            .antMatchers("/pt/**").access("#oauth2.hasScope('all')")    // pt oauth2验证，scope=all
+            .anyRequest().permitAll();    // 其他请求允许
     }
 }
