@@ -9085,3 +9085,207 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2016-12-29 14:05:28.073  INFO 5792 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2016-12-29 14:05:28.133  INFO 5792 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 59 ms
 2016-12-29 14:05:39.339  INFO 5792 --- [hystrix-FooService-1] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:28:46.121  INFO 3784 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@33fe57a9: startup date [Fri Jan 06 16:28:46 CST 2017]; root of context hierarchy
+2017-01-06 16:28:47.237  INFO 3784 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-06 16:28:47.411  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [class org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$6cd2339d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:47.427  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$93289e75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:49.612  INFO 3784 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='consul', propertySources=[ConsulPropertySource [name='config/provider/'], ConsulPropertySource [name='config/application/']]]
+2017-01-06 16:28:49.729  INFO 3784 --- [main] charles.sc.provider.Application          : No active profile set, falling back to default profiles: default
+2017-01-06 16:28:49.760  INFO 3784 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@26d96e5: startup date [Fri Jan 06 16:28:49 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@33fe57a9
+2017-01-06 16:28:51.171  INFO 3784 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'hystrixFeature' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixWebConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration$HystrixWebConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration.class]]
+2017-01-06 16:28:51.438  INFO 3784 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/C:/Users/ys/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2017-01-06 16:28:51.448  INFO 3784 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2017-01-06 16:28:52.024  WARN 3784 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-01-06 16:28:52.415  INFO 3784 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f25bdf3b-e048-3431-bbcd-32bb2c5e0a0f
+2017-01-06 16:28:52.426  INFO 3784 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2017-01-06 16:28:52.433  INFO 3784 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2017-01-06 16:28:52.463  INFO 3784 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-06 16:28:52.760  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [class org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$6cd2339d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:53.992  INFO 3784 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/C:/Users/ys/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2017-01-06 16:28:53.993  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationGlobalProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:54.012  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationGlobalProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:54.237  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$93289e75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:54.267  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.config.ChannelBindingServiceConfiguration$PostProcessorConfiguration' of type [class org.springframework.cloud.stream.config.ChannelBindingServiceConfiguration$PostProcessorConfiguration$$EnhancerBySpringCGLIB$$6ed93404] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:28:56.192  INFO 3784 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8090 (http)
+2017-01-06 16:28:56.243  INFO 3784 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-06 16:28:56.252  INFO 3784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-01-06 16:28:56.709  INFO 3784 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-06 16:28:56.710  INFO 3784 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6950 ms
+2017-01-06 16:28:58.002  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-06 16:28:58.148  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-01-06 16:28:58.150  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-06 16:28:58.150  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-06 16:28:58.151  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-06 16:28:58.151  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-06 16:28:58.153  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-01-06 16:28:58.154  INFO 3784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-01-06 16:28:59.519  WARN 3784 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2017-01-06 16:28:59.520  INFO 3784 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-01-06 16:28:59.543  INFO 3784 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6efd0a6e
+2017-01-06 16:29:03.112  INFO 3784 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@26d96e5: startup date [Fri Jan 06 16:28:49 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@33fe57a9
+2017-01-06 16:29:03.658  INFO 3784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/foo],methods=[GET]}" onto public java.lang.String charles.sc.provider.service.FooService.bar()
+2017-01-06 16:29:03.664  INFO 3784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-06 16:29:03.665  INFO 3784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-06 16:29:04.186  INFO 3784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:29:04.186  INFO 3784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:29:04.577  INFO 3784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:29:06.224  INFO 3784 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2017-01-06 16:29:07.733  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-01-06 16:29:07.738  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-01-06 16:29:07.739  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.741  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.742  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2017-01-06 16:29:07.745  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.746  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.748  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2017-01-06 16:29:07.749  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2017-01-06 16:29:07.750  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2017-01-06 16:29:07.752  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.757  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.759  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2017-01-06 16:29:07.764  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-01-06 16:29:07.766  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-01-06 16:29:07.767  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/bus/refresh],methods=[POST]}" onto public void org.springframework.cloud.bus.endpoint.RefreshBusEndpoint.refresh(java.lang.String)
+2017-01-06 16:29:07.773  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-01-06 16:29:07.773  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.775  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/consul || /consul.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.776  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2017-01-06 16:29:07.778  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.778  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.780  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.781  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/bus/env],methods=[POST]}" onto public void org.springframework.cloud.bus.endpoint.EnvironmentBusEndpoint.env(java.util.Map<java.lang.String, java.lang.String>,java.lang.String)
+2017-01-06 16:29:07.783  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-01-06 16:29:07.783  INFO 3784 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2017-01-06 16:29:09.273  INFO 3784 --- [main] o.s.integration.channel.DirectChannel    : Channel 'provider:8090.springCloudBusInput' has 1 subscriber(s).
+2017-01-06 16:29:09.819  WARN 3784 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2017-01-06 16:29:09.819  INFO 3784 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-01-06 16:29:10.881  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-06 16:29:10.898  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'integrationMbeanExporter' has been autodetected for JMX exposure
+2017-01-06 16:29:10.900  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-01-06 16:29:10.902  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2017-01-06 16:29:10.905  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2017-01-06 16:29:10.907  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-01-06 16:29:10.908  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-01-06 16:29:10.914  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-01-06 16:29:10.957  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2017-01-06 16:29:10.995  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-01-06 16:29:11.116  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'integrationMbeanExporter': registering with JMX server as MBean [org.springframework.integration.monitor:name=integrationMbeanExporter,type=IntegrationMBeanExporter]
+2017-01-06 16:29:11.258  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=26d96e5,type=ConfigurationPropertiesRebinder]
+2017-01-06 16:29:11.268  INFO 3784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2017-01-06 16:29:11.300  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering beans for JMX exposure on startup
+2017-01-06 16:29:11.302  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBusOutput
+2017-01-06 16:29:11.310  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=springCloudBusOutput': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=springCloudBusOutput]
+2017-01-06 16:29:11.566  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBusInput
+2017-01-06 16:29:11.570  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=springCloudBusInput': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=springCloudBusInput]
+2017-01-06 16:29:11.704  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2017-01-06 16:29:11.706  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=nullChannel': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=nullChannel]
+2017-01-06 16:29:11.740  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2017-01-06 16:29:11.743  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=errorChannel': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=errorChannel]
+2017-01-06 16:29:11.902  INFO 3784 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageHandler,name=errorLogger,bean=internal': registering with JMX server as MBean [org.springframework.integration:type=MessageHandler,name=errorLogger,bean=internal]
+2017-01-06 16:29:12.541  INFO 3784 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147482648
+2017-01-06 16:29:12.829  INFO 3784 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@d863bb: startup date [Fri Jan 06 16:29:12 CST 2017]; root of context hierarchy
+2017-01-06 16:29:12.888  INFO 3784 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-06 16:29:12.892  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [class org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$6cd2339d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:29:12.893  INFO 3784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$93289e75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-01-06 16:29:13.487  INFO 3784 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='consul', propertySources=[ConsulPropertySource [name='config/provider/'], ConsulPropertySource [name='config/application/']]]
+2017-01-06 16:29:13.502  INFO 3784 --- [main] charles.sc.provider.Application          : No active profile set, falling back to default profiles: default
+2017-01-06 16:29:13.506  INFO 3784 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@743b7025: startup date [Fri Jan 06 16:29:13 CST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@26d96e5
+2017-01-06 16:29:13.598  INFO 3784 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-06 16:29:13.763  INFO 3784 --- [main] charles.sc.provider.Application          : Started Application in 1.168 seconds (JVM running for 29.935)
+2017-01-06 16:29:13.811  INFO 3784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2017-01-06 16:29:13.811  INFO 3784 --- [main] o.s.integration.channel.DirectChannel    : Channel 'provider:8090.springCloudBusOutput' has 1 subscriber(s).
+2017-01-06 16:29:13.811  INFO 3784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started outbound.springCloudBus
+2017-01-06 16:29:13.813  INFO 3784 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-01-06 16:29:13.821  INFO 3784 --- [main] o.s.c.consul.discovery.ConsulLifecycle   : Registering service with consul: NewService{id='provider-8090', name='provider', tags=[], address='10.2.125.170', port=8090, check=Check{script='null', interval=10s, ttl=null, http=http://10.2.125.170:8090/health, tcp=null, timeout=null}}
+2017-01-06 16:29:14.332  INFO 3784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2017-01-06 16:29:14.333  INFO 3784 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'provider:8090.errorChannel' has 1 subscriber(s).
+2017-01-06 16:29:14.333  INFO 3784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2017-01-06 16:29:14.334  INFO 3784 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482647
+2017-01-06 16:29:14.377  INFO 3784 --- [main] o.s.c.c.b.ConsulInboundMessageProducer   : started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@6fd07a56
+2017-01-06 16:29:14.377  INFO 3784 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-01-06 16:29:14.417  INFO 3784 --- [main] ration$HystrixMetricsPollerConfiguration : Starting poller
+2017-01-06 16:29:14.695  INFO 3784 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090 (http)
+2017-01-06 16:29:14.702  INFO 3784 --- [main] charles.sc.provider.Application          : Started Application in 29.833 seconds (JVM running for 30.874)
+2017-01-06 16:29:18.404  INFO 3784 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-01-06 16:29:18.405  INFO 3784 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-01-06 16:29:18.474  INFO 3784 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 68 ms
+2017-01-06 16:29:20.198  WARN 3784 --- [http-nio-8090-exec-2] o.s.web.servlet.PageNotFound             : Request method 'POST' not supported
+2017-01-06 16:29:31.099  INFO 3784 --- [hystrix-FooService-1] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:29:48.517  INFO 3784 --- [hystrix-FooService-2] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:29:50.177  INFO 3784 --- [hystrix-FooService-3] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:29:50.703  INFO 3784 --- [hystrix-FooService-4] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:29:50.863  INFO 3784 --- [hystrix-FooService-5] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:29:51.049  INFO 3784 --- [hystrix-FooService-6] charles.sc.provider.service.FooService   : FooService.bar
+2017-01-06 16:32:17.875  INFO 3784 --- [task-scheduler-2] o.a.http.impl.client.DefaultHttpClient   : I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8500: Connection reset
+2017-01-06 16:32:17.875  INFO 3784 --- [pool-1-thread-1] o.a.http.impl.client.DefaultHttpClient   : I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8500: Connection reset
+2017-01-06 16:32:17.876  INFO 3784 --- [task-scheduler-2] o.a.http.impl.client.DefaultHttpClient   : Retrying request to {}->http://127.0.0.1:8500
+2017-01-06 16:32:17.876  INFO 3784 --- [pool-1-thread-1] o.a.http.impl.client.DefaultHttpClient   : Retrying request to {}->http://127.0.0.1:8500
+2017-01-06 16:32:18.878  WARN 3784 --- [task-scheduler-2] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:18.878 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:19.882  WARN 3784 --- [task-scheduler-2] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:20.384 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:21.874 ERROR 3784 --- [task-scheduler-1] o.s.c.c.discovery.ConsulCatalogWatch     : Error watching Consul CatalogServices
+
+com.ecwid.consul.transport.TransportException: java.net.ConnectException: Connection refused: connect
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:91) ~[consul-api-1.1.11.jar:na]
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:50) ~[consul-api-1.1.11.jar:na]
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:81) ~[consul-api-1.1.11.jar:na]
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:114) ~[consul-api-1.1.11.jar:na]
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:108) ~[consul-api-1.1.11.jar:na]
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:284) ~[consul-api-1.1.11.jar:na]
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:65) ~[spring-cloud-consul-discovery-1.1.2.RELEASE.jar:1.1.2.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_66]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_66]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_66]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65) [spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_66]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) [na:1.8.0_66]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) [na:1.8.0_66]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_66]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_66]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_66]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_66]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_66]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_66]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_66]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_66]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_66]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_66]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_66]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_66]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:220) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:164) ~[httpclient-4.5.2.jar:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:139) ~[httpclient-4.5.2.jar:4.5.2]
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:75) ~[consul-api-1.1.11.jar:na]
+	... 19 common frames omitted
+
+2017-01-06 16:32:21.899  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:21.900 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:22.902  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:23.405 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:24.907  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:24.907 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:25.900  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:26.411 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:27.904  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:27.913 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:28.905  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:29.415 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:30.900  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:30.910 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:31.913  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:32.415 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:33.917  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/provider/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:33.917 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:34.940  WARN 3784 --- [task-scheduler-8] o.s.cloud.consul.config.ConfigWatch      : Error querying consul Key/Values for context 'config/application/'. Message: java.net.ConnectException: Connection refused: connect
+2017-01-06 16:32:35.431 ERROR 3784 --- [pool-1-thread-1] o.s.c.c.b.ConsulInboundMessageProducer   : Error getting consul events: java.net.ConnectException: Connection refused: connect
